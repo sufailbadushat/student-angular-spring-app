@@ -1,0 +1,55 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1 class="text-dark">Search Student</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label ">Admission Number</label>
+                    <input name="admNo" [(ngModel)]="admNo" type="text" placeholder="Type admission number"
+                        class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValue()" class="btn btn-dark  font-monospace fw-bolder py-1">Search</button>
+                </div>
+            </div>
+
+            
+
+            <table class="table mt-5">
+                <thead>
+                    <tr>
+
+                   
+                        <th scope="col"> Name</th>
+                        <th scope="col">Admission Number</th>
+                        <th scope="col">Roll Number</th>
+                        <th scope="col">College Name </th>
+                       
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let i of searchValue">
+
+                        <td>{{i.name}}</td>
+                        <td>{{i.admNo}}</td>
+                        <td>{{i.rollNo}}</td>
+                        <td>{{i.collegeName}}</td>
+                        
+
+                    </tr>
+
+                </tbody>
+                
+                
+            </table>
+           
+        </div>
+    </div>
+</div>

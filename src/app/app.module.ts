@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewStudentComponent } from './view-student/view-student.component';
+import { SearchStudentComponent } from './search-student/search-student.component';
 
 
 let myRoot:Routes=[
@@ -18,13 +19,18 @@ let myRoot:Routes=[
   {
     path:"view",
     component:ViewStudentComponent
+  },
+  {
+    path:"search",
+    component:SearchStudentComponent
   }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     AddStudentComponent,
-    ViewStudentComponent
+    ViewStudentComponent,
+    SearchStudentComponent
   ],
   imports: [
     BrowserModule,
