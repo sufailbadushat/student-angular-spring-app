@@ -31,5 +31,22 @@ export class SearchStudentComponent {
     )
 
   }
+  
+  deleteBtnClick = (id: any) => {
+
+    let data: any = { "id": id }
+    this.api.deleteStudents(data).subscribe(
+      (genrated: any)=>{
+        console.log(genrated)
+        if (genrated.status == "success") {
+          alert("Student deleted successfully!");
+          this.admNo = ""
+          this.searchValue = []
+        } else {
+          alert("something went wrong!");
+        }
+      }
+    )
+  }
 
 }
