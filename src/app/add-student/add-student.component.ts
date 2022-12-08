@@ -27,7 +27,7 @@ export class AddStudentComponent {
     this.api.addStudents(data).subscribe(
       (response:any)=>{
         if (response.status == "success") {
-          alert("Product added successfully!");
+          alert("Student added successfully!");
           this.name = ""
           this.admNo = ""
           this.rollNo = ""
